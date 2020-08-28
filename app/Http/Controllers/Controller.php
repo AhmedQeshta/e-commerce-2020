@@ -10,4 +10,14 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    // save in public
+    public function uploadImage($image , $dir = 'image'){
+        $uploadImage = $image;
+        $imagename = time(). '.' . $uploadImage->getClientOriginalExtension();
+//        $direction = storage_path('/'.$dir.'/');
+        $direction = base_path('assets/'.$dir.'/');
+        $uploadImage->move($direction,$imagename);
+        $imagePath = $dir. '/' . $imagename ;
+        return $imagePath;
+    }
 }

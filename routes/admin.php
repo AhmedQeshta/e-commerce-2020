@@ -14,7 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-define('PAGINATION_COUNT',10);
+define('PAGINATION_COUNT',5);
+
+############################### login +++++++++++++++++++++++++++++++++++++++++++
+Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function () {
+    Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
+    Route::post('login', 'LoginController@login')->name('admin.login');
+});
+############################### End login +++++++++++++++++++++++++++++++++++++++++++
+
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function () {
     Route::get('/', 'DashboardController@index')->name('admin.dashboard');
 
@@ -80,10 +88,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function ()
 });
 
 
-Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function () {
-    Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
-    Route::post('login', 'LoginController@login')->name('admin.login');
-});
+
 
 
  ########################### test part routes #####################

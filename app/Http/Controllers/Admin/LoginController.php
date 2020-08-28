@@ -14,12 +14,12 @@ class LoginController extends Controller
         return view('admin.auth.login');
     }
 
+    ########## to use in tinker in power Shell ###############
     public function save(){
-
-        $admin = new App\Models\Admin();
-        $admin -> name ="Ahmed Emam";
-        $admin -> email ="ahmed@gmail.com";
-        $admin -> password = bcrypt("Ahmed Emam");
+        $admin = new  App\Models\Admin();
+        $admin -> name ="A7med Qeshta";
+        $admin -> email ="ahmedqeshta0592@gmail.com";
+        $admin -> password = bcrypt("0592157001");
         $admin -> save();
 
     }
