@@ -19,10 +19,13 @@ class MainCategory extends Model
         MainCategory::observe(MainCategoryObserver::class);
     }
 
+    ################## local scope to tell me if active or not ###############
     public function scopeActive($query)
     {
         return $query->where('active', 1);
     }
+    ################## End  local scope to tell me if active or not ###############
+
 
     public function scopeSelection($query)
     {

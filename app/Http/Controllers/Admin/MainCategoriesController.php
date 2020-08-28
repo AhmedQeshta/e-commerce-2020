@@ -43,10 +43,16 @@ class MainCategoriesController extends Controller
             $default_category = array_values($filter->all()) [0];
 
 
-            $filePath = "";
-            if ($request->has('photo')) {
-
-                $filePath = uploadImage('maincategories', $request->photo);
+//            $filePath = "";
+//            if ($request->has('photo')) {
+//
+//                $filePath = uploadImage('maincategories', $request->photo);
+//            }
+            $imagePath = "";
+            if($request->hasFile('photo')){
+                // update img
+                $imagePath = parent::uploadImage($request->file('photo'),'images/mainCategory');
+                $request['photo'] = $imagePath ;
             }
 
             DB::beginTransaction();
@@ -56,7 +62,7 @@ class MainCategoriesController extends Controller
                 'translation_of' => 0,
                 'name' => $default_category['name'],
                 'slug' => $default_category['name'],
-                'photo' => $filePath
+                'photo' => $imagePath
             ]);
 
             $categories = $main_categories->filter(function ($value, $key) {
@@ -73,7 +79,7 @@ class MainCategoriesController extends Controller
                         'translation_of' => $default_category_id,
                         'name' => $category['name'],
                         'slug' => $category['name'],
-                        'photo' => $filePath
+                        'photo' => $imagePath
                     ];
                 }
 
@@ -168,6 +174,11 @@ class MainCategoriesController extends Controller
             $image = Str::after($maincategory->photo, 'assets/');
             $image = base_path('assets/' . $image);
             unlink($image); //delete from folder
+
+            if(File::exists(public_path($maincategory->photo))){
+
+                File::delete(public_path($maincategory->photo));
+            }
 
             $maincategory->delete();
             return redirect()->route('admin.maincategories')->with(['success' => 'تم حذف القسم بنجاح']);

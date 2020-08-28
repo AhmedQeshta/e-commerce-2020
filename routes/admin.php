@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-define('PAGINATION_COUNT',5);
+define('PAGINATION_COUNT',10);
 
 ############################### login +++++++++++++++++++++++++++++++++++++++++++
 Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function () {

@@ -14,8 +14,7 @@ class Controller extends BaseController
     public function uploadImage($image , $dir = 'image'){
         $uploadImage = $image;
         $imagename = time(). '.' . $uploadImage->getClientOriginalExtension();
-//        $direction = storage_path('/'.$dir.'/');
-        $direction = base_path('assets/'.$dir.'/');
+        $direction = public_path('/assets/'.$dir.'/');
         $uploadImage->move($direction,$imagename);
         $imagePath = $dir. '/' . $imagename ;
         return $imagePath;
