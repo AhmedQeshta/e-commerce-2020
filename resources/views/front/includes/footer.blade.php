@@ -167,7 +167,7 @@
             <div class="row">
                 <div class="col-md-6 align-items-center justify-content-md-start justify-content-sm-center d-flex pb-xs-max-20 flex-center">
                     <span>
-            Copyright © 2018 Vinovathemes. All Rights Reserved
+            Copyright © {{date('Y')}}  Vinovathemes. All Rights Reserved
           </span>
                 </div>
                 <div class="payment-image col-md-6 align-items-center justify-content-md-end justify-content-sm-center d-flex flex-center">
