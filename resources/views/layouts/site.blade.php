@@ -1,4 +1,3 @@
-
 <!-- begin index.tpl -->
 <!doctype html>
 <html lang="ar">
@@ -9,8 +8,6 @@
 
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-
 
     <title>Prestashop_Savemart</title>
     <meta name="description" content="المتجر مدعوم من طرف بريستاشوب">

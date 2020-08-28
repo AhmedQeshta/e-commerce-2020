@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::view('we','layouts.site');
 
 route::get('sendSms//','HomeController@sendSms');
 
