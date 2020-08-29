@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MainCategoryRequest;
 use App\Models\MainCategory;
+use Faker\Provider\DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use DB;
@@ -12,6 +13,7 @@ use Illuminate\Support\Str;
 
 class MainCategoriesController extends Controller
 {
+
     public function index()
     {
         $default_lang = get_default_lang();
@@ -44,6 +46,12 @@ class MainCategoriesController extends Controller
             $filter = $main_categories->filter(function ($value, $key) {
                 return $value['abbr'] == get_default_lang();
             });
+
+            if (!$request->has('category.0.active'))
+                $request->request->add(['active' => 0]);
+            else
+                $request->request->add(['active' => 1]);
+
 //            default lang *(ar)
             $default_category = array_values($filter->all()) [0];
             $default_category_id = MainCategory::insertGetId([
@@ -51,13 +59,14 @@ class MainCategoriesController extends Controller
                 'translation_of' => 0,
                 'name' => $default_category['name'],
                 'slug' => str::slug($default_category['name']),
+                'active' => $request->active,
                 'photo' => $imagePath
             ]);
 
 
 
 
-
+#### لو عندنا أكثر من تخزين في الداتا بيز نستخدمها (للمزيد شوف فيديو 19 professional code) في نفس الدالة ####
             DB::beginTransaction();
 
             $categories = $main_categories->filter(function ($value, $key) {
@@ -66,7 +75,6 @@ class MainCategoriesController extends Controller
 
 
             if (isset($categories) && $categories->count()) {
-
                 $categories_arr = [];
                 foreach ($categories as $category) {
                     $categories_arr[] = [
@@ -74,13 +82,14 @@ class MainCategoriesController extends Controller
                         'translation_of' => $default_category_id,
                         'name' => $category['name'],
                         'slug' => str::slug($category['name']),
+                        'active' => $request->active,
                         'photo' => $imagePath
                     ];
                 }
 
                 MainCategory::insert($categories_arr);
             }
-
+#### لو عندنا أكثر من تخزين في الداتا بيز نستخدمها (للمزيد شوف فيديو 19 professional code) في نفس الدالة ####
             DB::commit();
 
             return redirect()->route('admin.maincategories')->with(['success' => 'تم الحفظ بنجاح']);
@@ -126,13 +135,6 @@ class MainCategoriesController extends Controller
             else
                 $request->request->add(['active' => 1]);
 
-
-            MainCategory::where('id', $mainCat_id)
-                ->update([
-                    'name' => $category['name'],
-                    'active' => $request->active,
-                ]);
-
             // save image
 
             if($request->hasFile('photo')){
@@ -144,16 +146,14 @@ class MainCategoriesController extends Controller
                     ]);
             }
 
-//            if ($request->has('photo')) {
-//                $filePath = uploadImage('maincategories', $request->photo);
-//                MainCategory::where('id', $mainCat_id)
-//                    ->update([
-//                        'photo' => $filePath,
-//                    ]);
-//            }
-
+            MainCategory::where('id', $mainCat_id)
+                ->update([
+                    'name' => $category['name'],
+                    'active' => $request->active,
+                ]);
 
             return redirect()->route('admin.maincategories')->with(['success' => 'تم ألتحديث بنجاح']);
+
         } catch (\Exception $ex) {
 
             return redirect()->route('admin.maincategories')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
@@ -179,10 +179,10 @@ class MainCategoriesController extends Controller
             $image = base_path('assets/' . $image);
             unlink($image); //delete from folder
 
-            if(File::exists(public_path($maincategory->photo))){
-
-                File::delete(public_path($maincategory->photo));
-            }
+//            if(File::exists(public_path($maincategory->photo))){
+//
+//                File::delete(public_path($maincategory->photo));
+//            }
 
             $maincategory->delete();
             return redirect()->route('admin.maincategories')->with(['success' => 'تم حذف القسم بنجاح']);

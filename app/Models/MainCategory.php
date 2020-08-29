@@ -35,6 +35,8 @@ class MainCategory extends Model
         return $query->select('id', 'translation_lang', 'name', 'slug', 'photo', 'active', 'translation_of');
     }
 
+    ################## to save image ###in data base(/images/mainCategory/1598713617.jpg)################
+    ### in show in blade ##  http://e-commerce.net/assets/images/mainCategory/1598713617.jpg  ####
     public function getPhotoAttribute($val)
     {
         return ($val !== null) ? asset('assets/' . $val) : "";

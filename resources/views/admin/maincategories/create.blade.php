@@ -96,23 +96,23 @@
 
 
                                                         </div>
-{{--                                                        <div class="row">--}}
-{{--                                                            <div class="col-md-6">--}}
-{{--                                                                <div class="form-group mt-1">--}}
-{{--                                                                    <input type="checkbox" value="1"--}}
-{{--                                                                           name="category[{{$index}}][active]"--}}
-{{--                                                                           id="switcheryColor4"--}}
-{{--                                                                           class="switchery" data-color="success"--}}
-{{--                                                                           checked/>--}}
-{{--                                                                    <label for="switcheryColor4"--}}
-{{--                                                                           class="card-title ml-1">الحالة  {{__('messages.'.$lang -> abbr)}} </label>--}}
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group mt-1">
+                                                                    <input type="checkbox" value="1"
+                                                                           name="category[{{$index}}][active]"
+                                                                           id="switcheryColor4"
+                                                                           class="switchery" data-color="success"
+                                                                           checked/>
+                                                                    <label for="switcheryColor4"
+                                                                           class="card-title ml-1">الحالة  {{__('messages.'.$lang -> abbr)}} </label>
 
-{{--                                                                    @error("category.$index.active")--}}
-{{--                                                                    <span class="text-danger"> </span>--}}
-{{--                                                                    @enderror--}}
-{{--                                                                </div>--}}
-{{--                                                            </div>--}}
-{{--                                                        </div>--}}
+                                                                    @error("category.$index.active")
+                                                                    <span class="text-danger"> </span>
+                                                                    @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     @endforeach
                                                 @endif
                                             </div>
