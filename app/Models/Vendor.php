@@ -36,7 +36,7 @@ class Vendor extends Model
         return $query->select('id', 'category_id','latitude','longitude', 'active', 'name', 'address', 'email', 'logo', 'mobile');
     }
 
-
+// ONE vendor has one main_category
     public function category()
     {
 

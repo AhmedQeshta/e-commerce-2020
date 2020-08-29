@@ -54,7 +54,7 @@ class VendorsController extends Controller
                 'active' => $request->active,
                 'address' => $request->address,
                 'logo' => $imagePath,
-                'password' => $request->password,
+                'password' => $request->password, //is bcrypt in folder App\Models\Vendor.php (use mutators)
                 'category_id' => $request->category_id,
                 'latitude' => $request->latitude,
                 'longitude' => $request->longitude,
@@ -126,8 +126,7 @@ class VendorsController extends Controller
 
 
             if ($request->has('password') && !is_null($request->  password)) {
-
-                $data['password'] = $request->password;
+                $data['password'] = $request->password;//is bcrypt in folder App\Models\Vendor.php (use mutators)
             }
 
             Vendor::where('id', $id)

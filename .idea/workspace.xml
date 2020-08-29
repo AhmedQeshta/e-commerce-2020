@@ -2,98 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caece16e-ee7a-46c8-bb11-50df2823ab5e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598726516.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598726601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_29_175931_create_vendors_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/0Cjcu5wm7D78WM9Ix1Dv1RQ14lOo2P9C1FEh3osI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/2RiRtbEThL33qdES6abYHExs8hpHMPeOnK8Sva0k.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/2vYYm6VMf6xN27Tgc6WS1SadxxeEL1aoEIXIAv2c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/3VfbtnDou0Gh5JDEPGxXootJwx5OssSjrfSeT7A4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/4mHohpEep9k7L2RVYx8wL6QTh4rzX04DOIaU8FRX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/6zL5U2Tcuv6Eea9NErSkh7mWb44xGHInlELYP5It.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/75VyWY7zBhls89yQHErjytmsmofZHXuYhv3pOdts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/8JBXqWn12Quxyb275pNd3f5Mebq2O1TpeKpAIxB3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/8g5d1Zz9Y49TTWe7171G5hwKluxPE7j6g7djTMZS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/A1xSVW75kculNXPV6PPOl0kLLpIljAENPQmoggvi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/BLBAxzwLfNIL1LnEp3TzzGFsFPw4nu4f3Fu0j8Rk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/G1yTMMwqOfIdoLGOa3zE9Jw70aQkQ1jYt7RUhjuE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/JSHzFvl8Mp6NJGCorGqd6kdoWK5mAKwf7qGFhkl6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/KKaKAqXYzrhLgBrRQBJ5GMbYowhOcUQxUtCAH7hx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/KcIkDfURrWXXXnMADRa2Vgdyn7NZXRV16Qm2whi5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/McS8JQgHj9G0k9ZIJ4PR0pqORdyzuWuQZe9CdQCw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/N5UyHGfj2Vd6UUXrC7KCpNwz1DRiqdluRqFGjfmr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/NGI9ubFn1G9AmXl9tgiMsqS538nWk2Ad9oj0oc7i.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/OXkn3Pdl8Sy8VbPN7eAZ7xS8IQozHSSzpAsud96G.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/P7Qcn7XjBQsF8EGgJxucQhPhS5APjO4Bk1F8yGUI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/S8ffKt5KrmAjiTOGWiXljIkzmlqIrQKaA5wW5nMe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/TtkOZzkKcqJSmrTwJI4yKryhitcB03i5yH9Zj75c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/UPjR5isSuLGsIObohSRsMA3Q8SOA2NXCIGqAq9gB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/Uc7TsEQrjEJA16ulrFtZWjoEKOZpgSJwfyDGEuJB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/YJLGjPqOsiwaXCFlskwSvtmtUyRzytwxrMdGdsh1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/Z911nXV3QYk9iYPjLpO3DQntpPzeLCHuas7L9Pd4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/aVlMJ3o6vzXo75issZ2RkWP34Vad05YrLmDBFsBA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/ash2stEjl8lEXPIgRs4QpwAj18ow6KwAUJBUQugU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/dZQ7CMrVoWapFR1QdPIcTE06vzoNfopDtNqFOZdG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/e0w0Wa9hN2vWNbeMC9puFxmIqXfqQEKJtzV6Jej6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/eFmFOTfA2hGyv0SX5x84HF64qXKKMxOugv8EHtxi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/fgk0a5o8SQzMx7z62Vy8222mLqVQMsBhS2dEGB73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/imFf2aDHfFNwvUzYYwZEJgvv4peoBXbHWPhXaheW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/josNfC7ziXAHpysdda0hXJRKGuSqjoNq2KEweWXu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/llX3itbxuVhAn8cAy09ebUbYCYCZZQiolWA8BBwQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/o9qxpSlYRKTU70YsudqELhjLDOYu7udDRyCPFlXr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/pOXM8KcM0c5FQlw8BuxAS5dICfdTPaf63uP2wpH0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/qT6obibY1KRoUrSWyXQagN6U0Tcr8K800UbLsIG5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/r91l34LR6C12xu7qOXPO80aYlB6j0GzmFYLrQ1V9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/rLF8LR6h92anWN5sWhMXAkpdGMFsDpldR3Vilc7E.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/ssm90ogh4Ul6yEBUmWtRmUkBEghxN0xyGFj1O9CL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/u2JdLcZ3ti5lICzZIbaTffC34OfaVLg3ghYaQ2mm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/uHHjRf5gR64d82viLIxoDFptHjGNZzx91yCJfU6e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/uIAu4VO6NY0usSqpCXFnvBvC9TS7x8Pzm1vMsP2C.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/maincategories/xN4ub6u3E0m0xwOF1iOfE9JGLaI07TUTJ3Wznrfw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/0thkQo1eyDRyh60649O2zkjcM2B8cI1S94ksf14a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/5vdwDDPvrcQVsbcVaRuBOjZ6JsjchNL97MaAm1l3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/C3WiijSTYD0t0XGq18alyXgfyIhtgeZKsIxXyakt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/Du42U7yTTvS0gWrRnw4JBd6a4NSI2TyVjgyBVb5I.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/MnAQkOjkb239gMNsPuKgKc802w9GMs2wuN7WVrN0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/TMVtMm7SSjZRT2Axio0DWuuvqitxTx8Du205pQEV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/UHzo0wBjrYkMX1UoltdyP8O2WebtrqUwSL6suJNL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/bo2q9rPNahDoCCPWd1VNTbWJQdwBYon8tV2t9rKt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/brVDEIlqFuzqJryj6QhIGDX67VLYSRKjLNYrcLcJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/dFLdHQaBEA0rHjZLLuPpWQDa78Fuv89ZfJtJbwB8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/eQK3bze8B0UJnN1jZaCUNSwrxJsNMlyoFTVlDulU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/ffWMfkoRYrlIQe9QPNI3fyVnBRRAMAoGkFfWqxyD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/jeMp73jcwrTINmBnQjnm8FX3L8U8v2ePhROihkGB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/kVQmDDgENk8srjpqKAE6YefbWdj3EnhFDu07sBMN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/ljDHo85KIszyUojgTVqHwbHRdWpvCob6ReJaFXfG.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/psD5WX2HtO2YiDpVgXONRJBeGsrzZhNuGLgH46ra.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/smPr1tJ8eecFpZUiR1cc0qdymcahuGIiLg8Jh6xA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/uVcYVz17w8JuNQ4N3HZ1gjt3DEcnk65iRvepLuYI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/xdFFBypEZnOYqnSgF4ozmuhGduzg0ev8SEhk2nvd.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/y0WetETI3U7pzJxIQ4CxKURaxwBXz5YtNykCrcMp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/ytuLsyarAVnJZCWIplqXtkUCuwNrN0wf9oItCx7V.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets/images/vendors/z85KcytICIweb0fzmLlMIuudXWvLUvTJ81vlDKw7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598685464.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598720574.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598685602.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598686626.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598686639.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598688696.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598688872.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598688972.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598689088.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598689168.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598689201.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598690217.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598690582.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598692044.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598692093.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598693599.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598693666.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598693708.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vendor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/mainCategory/1598720574.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +222,7 @@
       <workItem from="1598627007640" duration="4717000" />
       <workItem from="1598637780264" duration="5574000" />
       <workItem from="1598684279470" duration="8040000" />
-      <workItem from="1598712122738" duration="8357000" />
+      <workItem from="1598712122738" duration="12967000" />
     </task>
     <servers />
   </component>

@@ -179,11 +179,6 @@ class MainCategoriesController extends Controller
             $image = base_path('assets/' . $image);
             unlink($image); //delete from folder
 
-//            if(File::exists(public_path($maincategory->photo))){
-//
-//                File::delete(public_path($maincategory->photo));
-//            }
-
             $maincategory->delete();
             return redirect()->route('admin.maincategories')->with(['success' => 'تم حذف القسم بنجاح']);
 
