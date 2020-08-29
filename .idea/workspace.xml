@@ -2,18 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caece16e-ee7a-46c8-bb11-50df2823ab5e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598685464.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598685602.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598686626.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598686639.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598688696.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598688872.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598688972.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598689088.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598689168.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598689201.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598690217.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598690582.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598692044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598692093.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598693599.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598693666.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/mainCategory/1598693708.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/General.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/General.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LanguageRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LanguageRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/MainCategoryRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/maincategories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +239,7 @@
       <workItem from="1598603061908" duration="3759000" />
       <workItem from="1598627007640" duration="4717000" />
       <workItem from="1598637780264" duration="5574000" />
+      <workItem from="1598684279470" duration="8040000" />
     </task>
     <servers />
   </component>

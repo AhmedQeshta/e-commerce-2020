@@ -36,9 +36,15 @@ class VendorsController extends Controller
             else
                 $request->request->add(['active' => 1]);
 
-            $filePath = "";
-            if ($request->has('logo')) {
-                $filePath = uploadImage('vendors', $request->logo);
+//            $filePath = "";
+//            if ($request->has('logo')) {
+//                $filePath = uploadImage('vendors', $request->logo);
+//            }
+            $imagePath = "";
+            if($request->hasFile('logo')){
+                // update img
+                $imagePath = parent::uploadImage($request->file('photo'),'images/vendors');
+                $request['logo'] = $imagePath ;
             }
 
             $vendor = Vendor::create([
@@ -47,7 +53,7 @@ class VendorsController extends Controller
                 'email' => $request->email,
                 'active' => $request->active,
                 'address' => $request->address,
-                'logo' => $filePath,
+                'logo' => $imagePath,
                 'password' => $request->password,
                 'category_id' => $request->category_id,
                 'latitude' => $request->latitude,
@@ -94,11 +100,19 @@ class VendorsController extends Controller
 
             DB::beginTransaction();
             //photo
-            if ($request->has('logo') ) {
-                 $filePath = uploadImage('vendors', $request->logo);
+//            if ($request->has('logo') ) {
+//                 $filePath = uploadImage('vendors', $request->logo);
+//                Vendor::where('id', $id)
+//                    ->update([
+//                        'logo' => $filePath,
+//                    ]);
+//            }
+            if($request->hasFile('logo')){
+                // update img
+                $imagePath = parent::uploadImage($request->file('logo'),'images/vendors');
                 Vendor::where('id', $id)
                     ->update([
-                        'logo' => $filePath,
+                        'logo' => $imagePath,
                     ]);
             }
 

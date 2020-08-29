@@ -13,6 +13,8 @@ class MainCategory extends Model
         'translation_lang', 'translation_of', 'name', 'slug', 'photo', 'active', 'created_at', 'updated_at'
     ];
 
+    public $timestamps = true;
+
     protected static function boot()
     {
         parent::boot();

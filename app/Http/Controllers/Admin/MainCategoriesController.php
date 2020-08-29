@@ -32,22 +32,6 @@ class MainCategoriesController extends Controller
     {
 
         try {
-            //return $request;
-
-            $main_categories = collect($request->category);
-
-            $filter = $main_categories->filter(function ($value, $key) {
-                return $value['abbr'] == get_default_lang();
-            });
-
-            $default_category = array_values($filter->all()) [0];
-
-
-//            $filePath = "";
-//            if ($request->has('photo')) {
-//
-//                $filePath = uploadImage('maincategories', $request->photo);
-//            }
             $imagePath = "";
             if($request->hasFile('photo')){
                 // update img
@@ -55,15 +39,26 @@ class MainCategoriesController extends Controller
                 $request['photo'] = $imagePath ;
             }
 
-            DB::beginTransaction();
+            $main_categories = collect($request->category);
 
+            $filter = $main_categories->filter(function ($value, $key) {
+                return $value['abbr'] == get_default_lang();
+            });
+//            default lang *(ar)
+            $default_category = array_values($filter->all()) [0];
             $default_category_id = MainCategory::insertGetId([
                 'translation_lang' => $default_category['abbr'],
                 'translation_of' => 0,
                 'name' => $default_category['name'],
-                'slug' => $default_category['name'],
+                'slug' => str::slug($default_category['name']),
                 'photo' => $imagePath
             ]);
+
+
+
+
+
+            DB::beginTransaction();
 
             $categories = $main_categories->filter(function ($value, $key) {
                 return $value['abbr'] != get_default_lang();
@@ -78,7 +73,7 @@ class MainCategoriesController extends Controller
                         'translation_lang' => $category['abbr'],
                         'translation_of' => $default_category_id,
                         'name' => $category['name'],
-                        'slug' => $category['name'],
+                        'slug' => str::slug($category['name']),
                         'photo' => $imagePath
                     ];
                 }
@@ -140,13 +135,22 @@ class MainCategoriesController extends Controller
 
             // save image
 
-            if ($request->has('photo')) {
-                $filePath = uploadImage('maincategories', $request->photo);
+            if($request->hasFile('photo')){
+                // update img
+                $imagePath = parent::uploadImage($request->file('photo'),'images/mainCategory');
                 MainCategory::where('id', $mainCat_id)
                     ->update([
-                        'photo' => $filePath,
+                        'photo' => $imagePath,
                     ]);
             }
+
+//            if ($request->has('photo')) {
+//                $filePath = uploadImage('maincategories', $request->photo);
+//                MainCategory::where('id', $mainCat_id)
+//                    ->update([
+//                        'photo' => $filePath,
+//                    ]);
+//            }
 
 
             return redirect()->route('admin.maincategories')->with(['success' => 'تم ألتحديث بنجاح']);
