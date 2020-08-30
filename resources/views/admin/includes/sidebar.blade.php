@@ -2,8 +2,11 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-            <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
-                        class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
+            <li class="nav-item active">
+                <a href="">
+                    <i class="la la-mouse-pointer"></i>
+                    <span class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span>
+                </a>
             </li>
 
             <li class="nav-item {{ Request::is('admin/languages','admin/languages/*') ? 'open' : '' }}  ">
@@ -22,8 +25,8 @@
                 </ul>
             </li>
 
-
-            <li class="nav-item {{ Request::is('admin/main_categories','admin/main_categories/*') ? 'open' : '' }} "><a href=""><i class="la la-group"></i>
+            <li class="nav-item {{ Request::is('admin/main_categories','admin/main_categories/*') ? 'open' : '' }} ">
+                <a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">الاقسام الرئيسيه </span>
                     <span class="badge badge badge-danger badge-pill float-right mr-2">{{App\Models\MainCategory::defaultCategory() ->count()}}</span>
                 </a>
@@ -37,7 +40,23 @@
                 </ul>
             </li>
 
-            <li class="nav-item {{ Request::is('admin/sub_categories','admin/sub_categories/*') ? 'open' : '' }}  "><a href=""><i class="la la-group"></i>
+            <li class="nav-item {{ Request::is('admin/vendors','admin/vendors/*') ? 'open' : '' }} ">
+                <a href=""><i class="la la-male"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
+                    <span class="badge badge badge-success badge-pill float-right mr-2">{{App\Models\Vendor::count()}}</span>
+                </a>
+                <ul class="menu-content">
+                    <li class="{{ Request::is('admin/vendors') ? 'active' : '' }}  "><a class="menu-item" href="{{route('admin.vendors')}}"
+                                                                                        data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    </li>
+                    <li class="{{ Request::is('admin/vendors/create') ? 'active' : '' }}  " ><a class="menu-item" href="{{route('admin.vendors.create')}}" data-i18n="nav.dash.crypto">أضافة
+                            متجر  </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item {{ Request::is('admin/sub_categories','admin/sub_categories/*') ? 'open' : '' }}  ">
+                <a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">الاقسام الفرعية   </span>
                     <span class="badge badge badge-danger badge-pill float-right mr-2">0</span>
                 </a>
@@ -51,21 +70,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item {{ Request::is('admin/vendors','admin/vendors/*') ? 'open' : '' }} "><a href=""><i class="la la-male"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
-                    <span
-                        class="badge badge badge-success badge-pill float-right mr-2">0</span>
-{{--                        class="badge badge badge-success badge-pill float-right mr-2">{{App\Models\Vendor::count()}}</span>--}}
-                </a>
-                <ul class="menu-content">
-                    <li class="{{ Request::is('admin/vendors') ? 'active' : '' }}  "><a class="menu-item" href="{{route('admin.vendors')}}"
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
-                    </li>
-                    <li class="{{ Request::is('admin/vendors/create') ? 'active' : '' }}  " ><a class="menu-item" href="{{route('admin.vendors.create')}}" data-i18n="nav.dash.crypto">أضافة
-                            متجر  </a>
-                    </li>
-                </ul>
-            </li>
+
 
 {{--            ################################ Addition ###(delete if any time , i don't use) ########################################## --}}
 

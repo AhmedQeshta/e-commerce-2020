@@ -23,12 +23,13 @@ class VendorsController extends Controller
 
     public function create()
     {
-        $categories = MainCategory::where('translation_of', 0)->active()->get();
+        $categories = MainCategory::defaultlang()->active()->get();
         return view('admin.vendors.create', compact('categories'));
     }
 
     public function store(VendorRequest $request)
     {
+//        return $request;
         try {
 
             if (!$request->has('active'))
@@ -43,7 +44,7 @@ class VendorsController extends Controller
             $imagePath = "";
             if($request->hasFile('logo')){
                 // update img
-                $imagePath = parent::uploadImage($request->file('photo'),'images/vendors');
+                $imagePath = parent::uploadImage($request->file('logo'),'images/vendors');
                 $request['logo'] = $imagePath ;
             }
 

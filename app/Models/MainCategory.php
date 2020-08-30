@@ -28,6 +28,10 @@ class MainCategory extends Model
     }
     ################## End  local scope to tell me if active or not ###############
 
+    public function scopeDefaultlang($query)
+    {
+        return $query->where('translation_of', 0);
+    }
 
     public function scopeSelection($query)
     {

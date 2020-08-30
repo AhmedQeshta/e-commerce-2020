@@ -20,8 +20,8 @@ class CreateVendorsTable extends Migration
             $table->string('mobile');
             $table->string('address');
             $table->string('email')->nullable();
-            $table->string('latitude');
-            $table->string('longitude');
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->string('password');
             $table->string('logo')->default('images/vendors/vendor.png');
             $table->unsignedTinyInteger('active')->default(0);
