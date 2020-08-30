@@ -246,7 +246,10 @@
         // ------------------main---function-----------------------
         function initAutocomplete() {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 24.740691, lng: 46.6528521 },
+                center: {
+                    lat: {{$vendor -> latitude}},
+                    lng: {{$vendor -> longitude}}
+                },
                 zoom: 13
             });
 
@@ -255,19 +258,40 @@
                 map: map,
                 draggable: true,
                 animation: google.maps.Animation.DROP,
-                position: { lat: 24.740691, lng: 46.6528521 },
+                position: {
+                    lat: {{$vendor -> latitude}},
+                    lng: {{$vendor -> longitude}}
+                },
             });
 
             //-----------3------------
-            const geocoder = new google.maps.Geocoder();
-            const infowindow = new google.maps.InfoWindow();
+
             google.maps.event.addListener(map, 'click', function(event) {
                 var newLocation = event.latLng;
-                $('#latitude').val(newLocation.lat());
-                $('#longitude').val(newLocation.lng());
-                $('#pac-input').val(newLocation.lat() + ` , ` + newLocation.lng());
+                if (newLocation.lat()){
+                    $('#latitude').val(newLocation.lat());
+                }else {
+                    $('#latitude').val({{$vendor -> latitude}});
+                }
+                if (newLocation.lng()){
+                    $('#longitude').val(newLocation.lng());
+                }else {
+                    $('#longitude').val({{$vendor -> longitude}});
+                }
+
+                if (newLocation.lat()||newLocation.lng()){
+                    $('#pac-input').val(newLocation.lat() + ` , ` + newLocation.lng());
+                }else {
+                    $('#pac-input').val({{$vendor -> latitude}} + ` , ` + {{$vendor -> longitude}});
+                }
+
                 changeLocationTo(newLocation,map,marker);
             });
+
+            $('#latitude').val({{$vendor -> latitude}});
+            $('#longitude').val({{$vendor -> longitude}});
+
+
         }
 
         var labelIndex = 0;

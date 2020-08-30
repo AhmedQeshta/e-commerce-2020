@@ -130,6 +130,12 @@ class MainCategoriesController extends Controller
 
             $category = array_values($request->category) [0];
 
+
+            $vendors = $main_category->vendors();
+            if (isset($vendors) && $vendors->count() > 0) {
+                return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن إلغاء تفعيل  هذا القسم  ']);
+            }
+
             if (!$request->has('category.0.active'))
                 $request->request->add(['active' => 0]);
             else
@@ -187,12 +193,16 @@ class MainCategoriesController extends Controller
         }
     }
 
-    public function changeStatus($id)
-    {
+    public function changeStatus($id){
         try {
             $maincategory = MainCategory::find($id);
             if (!$maincategory)
                 return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود ']);
+
+            $vendors = $maincategory->vendors();
+            if (isset($vendors) && $vendors->count() > 0) {
+                return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن إلغاء تفعيل  هذا القسم  ']);
+            }
 
            $status =  $maincategory -> active  == 0 ? 1 : 0;
 

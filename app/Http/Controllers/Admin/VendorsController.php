@@ -61,6 +61,7 @@ class VendorsController extends Controller
                 'longitude' => $request->longitude,
             ]);
 
+                //  to send Notification in mail use folder {App\Notifications\VendorCreated.php}
             Notification::send($vendor, new VendorCreated($vendor));
 
             return redirect()->route('admin.vendors')->with(['success' => 'تم الحفظ بنجاح']);
@@ -145,9 +146,23 @@ class VendorsController extends Controller
 
     }
 
-    public function changeStatus()
-    {
+    public function changeStatus($id){
+        try {
 
+            $vendor = Vendor::find($id);
+            if (!$vendor)
+                return redirect()->route('admin.vendors')->with(['error' => 'هذا القسم غير موجود ']);
+
+//
+            $status =  $vendor -> active  == 0 ? 1 : 0;
+
+            $vendor -> update(['active' =>$status ]);
+
+            return redirect()->route('admin.vendors')->with(['success' => ' تم تغيير الحالة بنجاح ']);
+
+        } catch (\Exception $ex) {
+            return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+        }
     }
 
 

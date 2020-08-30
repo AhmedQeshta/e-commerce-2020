@@ -165,11 +165,11 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group mt-1">
-                                                            <input type="checkbox" value="1"
+                                                            <input type="checkbox" value="0"
                                                                    name="active"
                                                                    id="switcheryColor4"
                                                                    class="switchery" data-color="success"
-                                                                   checked/>
+                                                                   />
                                                             <label for="switcheryColor4"
                                                                    class="card-title ml-1">الحالة </label>
 
@@ -221,6 +221,7 @@
 
         $('#latitude').val('');
         $('#longitude').val('');
+        $('#latlng').val('');
 
         var map;
 
@@ -228,7 +229,8 @@
         function initAutocomplete() {
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: 24.740691, lng: 46.6528521 },
-                zoom: 13
+                zoom: 13,
+                // mapTypeId: 'roadmap',
             });
 
 
@@ -240,14 +242,15 @@
             });
 
             //-----------3------------
-            const geocoder = new google.maps.Geocoder();
-            const infowindow = new google.maps.InfoWindow();
             google.maps.event.addListener(map, 'click', function(event) {
+                // var geocoder = new google.maps.Geocoder();
+                var infowindow = new google.maps.InfoWindow();
                 var newLocation = event.latLng;
                 $('#latitude').val(newLocation.lat());
                 $('#longitude').val(newLocation.lng());
-                $('#pac-input').val(newLocation.lat() + ` , ` + newLocation.lng());
+                $('#pac-input').val((newLocation.lng() + `,` + newLocation.lat()));
                 changeLocationTo(newLocation,map,marker);
+
             });
         }
 
@@ -267,7 +270,6 @@
             marker.setPosition(location);
             map.setCenter(location);
         }
-
 
 
 

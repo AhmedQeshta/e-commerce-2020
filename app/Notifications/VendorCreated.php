@@ -14,10 +14,11 @@ class VendorCreated extends Notification
 
 
     public $vendor;
+
     /**
      * Create a new notification instance.
      *
-     * @return void
+     * @param Vendor $vendor
      */
     public function __construct(Vendor $vendor)
     {
@@ -32,6 +33,7 @@ class VendorCreated extends Notification
      */
     public function via($notifiable)
     {
+            // mail , sms ,  database , slack
         return ['mail'];
     }
 
@@ -39,7 +41,7 @@ class VendorCreated extends Notification
      * Get the mail representation of the notification.
      *
      * @param  mixed  $notifiable
-     * @return \Illuminate\Notifications\Messages\MailMessage
+     * @return MailMessage
      */
     public function toMail($notifiable)
     {
