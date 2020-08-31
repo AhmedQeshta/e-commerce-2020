@@ -49,7 +49,7 @@ class Vendor extends Model
 
     }
 
-
+    ############## this is mutators to be password hash in insert in dataBase  ###############
     public function setPasswordAttribute($password)
     {
         if (!empty($password)) {

@@ -67,7 +67,7 @@ class VendorsController extends Controller
             return redirect()->route('admin.vendors')->with(['success' => 'تم الحفظ بنجاح']);
 
         } catch (\Exception $ex) {
-            return $ex;
+//            return $ex;
             return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
 
         }
@@ -139,7 +139,7 @@ class VendorsController extends Controller
             DB::commit();
             return redirect()->route('admin.vendors')->with(['success' => 'تم التحديث بنجاح']);
         } catch (\Exception $exception) {
-            return $exception;
+//            return $exception;
             DB::rollback();
             return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
         }
