@@ -15,6 +15,8 @@ class MainCategory extends Model
 
     public $timestamps = true;
 
+    ####################################### to use App\Observers\MainCategoryObserver.php #################################
+    ########################### to change status for all any model in relation with main_category ###################
     protected static function boot()
     {
         parent::boot();

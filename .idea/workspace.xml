@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="caece16e-ee7a-46c8-bb11-50df2823ab5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +224,7 @@
       <workItem from="1598712122738" duration="12967000" />
       <workItem from="1598771204227" duration="8679000" />
       <workItem from="1598790128464" duration="7875000" />
-      <workItem from="1598877232299" duration="3448000" />
+      <workItem from="1598877232299" duration="5633000" />
     </task>
     <servers />
   </component>
@@ -259,9 +263,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1595276700998" />
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595600179109">
-      <screen x="72" y="27" width="1294" height="741" />
+    <state x="451" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598882510403">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598882510403" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1595600179109" />
     <state x="348" y="27" width="746" height="741" key="#phpunit.xml" timestamp="1595196947758">
       <screen x="72" y="27" width="1294" height="741" />

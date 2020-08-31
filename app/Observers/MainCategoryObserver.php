@@ -36,7 +36,7 @@ class MainCategoryObserver
      */
     public function deleted(MainCategory $mainCategory)
     {
-        //
+        $mainCategory->categories()->delete();// delete category translation with default lang(ar)
     }
 
     /**

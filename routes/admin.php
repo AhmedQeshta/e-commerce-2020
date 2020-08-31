@@ -38,7 +38,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function ()
 
         Route::get('delete/{id}','LanguagesController@destroy') -> name('admin.languages.delete');
 
-
+        Route::get('changeStatus/{id}','LanguagesController@changeStatus') -> name('admin.languages.status');
     });
     ######################### End Languages Route ########################
 

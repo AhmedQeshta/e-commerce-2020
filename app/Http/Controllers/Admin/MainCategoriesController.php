@@ -185,6 +185,8 @@ class MainCategoriesController extends Controller
             $image = base_path('assets/' . $image);
             unlink($image); //delete from folder
 
+//############ use this file to  ## change status like main_category for all vendor ## App\Observers\MainCategoryObserver.php
+//            $maincategory->categories()->delete();// delete category translation with default lang(ar)
             $maincategory->delete();
             return redirect()->route('admin.maincategories')->with(['success' => 'تم حذف القسم بنجاح']);
 

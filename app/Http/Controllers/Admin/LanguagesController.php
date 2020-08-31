@@ -85,4 +85,23 @@ class LanguagesController extends Controller
             return redirect()->route('admin.languages')->with(['error' => 'هناك خطا ما يرجي المحاوله فيما بعد']);
         }
     }
+
+    public function changeStatus($id){
+        try {
+            $language = Language::find($id);
+            if (!$language)
+                return redirect()->route('admin.languages')->with(['error' => 'هذا اللغة غير موجود ']);
+
+
+            $status =  $language -> active  == 0 ? 1 : 0;
+
+            $language -> update(['active' =>$status ]);
+
+            return redirect()->route('admin.languages')->with(['success' => ' تم تغيير الحالة بنجاح ']);
+
+        } catch (\Exception $ex) {
+            return redirect()->route('admin.languages')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+        }
+    }
+
 }
