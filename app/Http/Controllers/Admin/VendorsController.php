@@ -152,13 +152,15 @@ class VendorsController extends Controller
             $vendor = Vendor::find($id);
             if (!$vendor)
                 return redirect()->route('admin.vendors')->with(['error' => 'هذا القسم غير موجود ']);
+################### active if main category is active if not you don't active it ##########################3
+            if ($vendor->category-> active  == 1){
+                $status =  $vendor -> active  == 0 ? 1 : 0;
+                $vendor -> update(['active' =>$status ]);
+                return redirect()->route('admin.vendors')->with(['success' => ' تم تغيير الحالة بنجاح ']);
+            }else{
+                return redirect()->route('admin.vendors')->with(['error' => 'لا يمكن تغير الحالة ,القسم الرئيسي غير مفعل']);
+            }
 
-//
-            $status =  $vendor -> active  == 0 ? 1 : 0;
-
-            $vendor -> update(['active' =>$status ]);
-
-            return redirect()->route('admin.vendors')->with(['success' => ' تم تغيير الحالة بنجاح ']);
 
         } catch (\Exception $ex) {
             return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);

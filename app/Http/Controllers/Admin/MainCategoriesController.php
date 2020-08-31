@@ -199,10 +199,13 @@ class MainCategoriesController extends Controller
             if (!$maincategory)
                 return redirect()->route('admin.maincategories')->with(['error' => 'هذا القسم غير موجود ']);
 
-            $vendors = $maincategory->vendors();
-            if (isset($vendors) && $vendors->count() > 0) {
-                return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن إلغاء تفعيل  هذا القسم  ']);
-            }
+//  ############################### if i need to change status if on vendor into main category #####################
+//            $vendors = $maincategory->vendors();
+//            if (isset($vendors) && $vendors->count() > 0) {
+//                return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن إلغاء تفعيل  هذا القسم  ']);
+//            }
+
+      //############ use this file to  ## change status like main_category for all vendor ## App\Observers\MainCategoryObserver.php
 
            $status =  $maincategory -> active  == 0 ? 1 : 0;
 
