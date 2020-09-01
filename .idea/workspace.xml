@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caece16e-ee7a-46c8-bb11-50df2823ab5e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/vendors/1598957399.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VendorsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vendor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/vendors/1598792823.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/vendors/1598792934.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/vendors/1598793628.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/vendors/1598797411.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_28_065224_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_065224_create_admins_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/admins/avatar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/vendors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/vendors/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/vendors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/vendors/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/vendors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/vendors/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,17 +158,18 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\ecommerce\app\Models" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
-      <recent name="C:\wamp64\www\ecommerce" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce\assets\images\mainCategory" />
       <recent name="C:\wamp64\www\ecommerce\resources\views" />
       <recent name="C:\wamp64\www\ecommerce\assets" />
       <recent name="C:\wamp64\www\ecommerce\routes" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\assets\images\admins" />
+      <recent name="C:\wamp64\www\ecommerce\app\Models" />
+      <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
+      <recent name="C:\wamp64\www\ecommerce" />
     </key>
   </component>
   <component name="RunManager">
@@ -225,6 +234,9 @@
       <workItem from="1598771204227" duration="8679000" />
       <workItem from="1598790128464" duration="7875000" />
       <workItem from="1598877232299" duration="5633000" />
+      <workItem from="1598898441590" duration="2668000" />
+      <workItem from="1598941239596" duration="4945000" />
+      <workItem from="1598955374679" duration="2777000" />
     </task>
     <servers />
   </component>
@@ -263,10 +275,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1595276700998" />
-    <state x="451" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598882510403">
+    <state x="451" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598899089065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598882510403" />
+    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598899089065" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1595600179109" />
     <state x="348" y="27" width="746" height="741" key="#phpunit.xml" timestamp="1595196947758">
       <screen x="72" y="27" width="1294" height="741" />
@@ -320,9 +332,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1050" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1595274259701" />
-    <state x="425" y="66" width="670" height="676" key="search.everywhere.popup" timestamp="1598638893154">
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup" timestamp="1598942817139">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="425" y="66" width="672" height="676" key="search.everywhere.popup/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1598942817139" />
     <state x="425" y="66" width="670" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598638893154" />
   </component>
 </project>

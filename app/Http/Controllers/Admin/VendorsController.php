@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\VendorCreated;
 use DB;
+use Illuminate\Support\Str;
 
 class VendorsController extends Controller
 {
@@ -144,6 +145,30 @@ class VendorsController extends Controller
             return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
         }
 
+    }
+
+    public function destroy($id){
+        try {
+            $vendors = Vendor::find($id);
+            if (!$vendors)
+                return redirect()->route('admin.vendors')->with(['error' => 'هذا القسم غير موجود ']);
+           ######  لا استطيع حذف هذا المتجر اذا كان له أقسام فرعية (تحتاج إلى تعديل) بعد اضافة sub_category  #######
+//            $subCategory = $vendors->subCategory();
+//            if (isset($subCategory) && $subCategory->count() > 0) {
+//                return redirect()->route('admin.vendors')->with(['error' => 'لأ يمكن حذف هذا القسم  ']);
+//            }
+
+            $image = Str::after($vendors->logo, 'assets/');
+            $image = base_path('assets/' . $image);
+            unlink($image); //delete from folder
+
+
+            $vendors->delete();
+            return redirect()->route('admin.vendors')->with(['success' => 'تم حذف المتجر بنجاح']);
+
+        } catch (\Exception $ex) {
+            return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
+        }
     }
 
     public function changeStatus($id){

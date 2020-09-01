@@ -230,7 +230,7 @@
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: 24.740691, lng: 46.6528521 },
                 zoom: 13,
-                // mapTypeId: 'roadmap',
+                mapTypeId: 'roadmap',
             });
 
 
@@ -239,6 +239,7 @@
                 draggable: true,
                 animation: google.maps.Animation.DROP,
                 position: { lat: 24.740691, lng: 46.6528521 },
+                title : 'العنوان الحالى',
             });
 
             //-----------3------------

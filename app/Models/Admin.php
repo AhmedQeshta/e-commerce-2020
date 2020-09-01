@@ -24,4 +24,12 @@ class Admin extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    ################## to save image ###in data base(/images/admins/avatar.jpg)################
+    ### in show in blade ##  http://e-commerce.net/assets/images/admins/avatar.jpg  ####
+    public function getPhotoAttribute($val)
+    {
+        return ($val !== null) ? asset('assets/' . $val) : "";
+
+    }
 }

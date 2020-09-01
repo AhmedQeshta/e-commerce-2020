@@ -24,6 +24,8 @@ class Vendor extends Model
         return $query->where('active', 1);
     }
 
+    ################## to save image ###in data base(/images/vendors/xxxxxxxx.xxx)################
+    ### in show in blade ##  http://e-commerce.net/assets/images/vendors/xxxxxxxx.xxx  ####
     public function getLogoAttribute($val)
     {
         return ($val !== null) ? asset('assets/' . $val) : "";
@@ -56,4 +58,6 @@ class Vendor extends Model
             $this->attributes['password'] = bcrypt($password);
         }
     }
+
+
 }

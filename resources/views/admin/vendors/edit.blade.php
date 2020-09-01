@@ -52,6 +52,7 @@
 
                                             <input type="hidden"  value="{{$vendor -> latitude}}" id="latitude" name="latitude">
                                             <input type="hidden" value="{{$vendor -> longitude}}" id="longitude"  name="longitude">
+                                            <input id="latlng" type="hidden" value="{{$vendor -> latitude}},{{$vendor -> longitude}}" />
 
                                             <div class="form-group">
                                                 <div class="text-center">
@@ -131,7 +132,7 @@
                                                     </div>
                                                     <div class="col-md-6 ">
                                                         <div class="form-group">
-                                                            <label for="projectinput1"> ألبريد الالكتروني </label>
+                                                            <label for="projectinput1"> البريد الالكتروني </label>
                                                             <input type="text" id="email"
                                                                    class="form-control"
                                                                    placeholder="  " name="email"
@@ -162,7 +163,6 @@
 
                                                     </div>
                                                 </div>
-
 
                                                 <di class="row">
                                                     <div class="col-md-6 ">
@@ -260,13 +260,17 @@
                 animation: google.maps.Animation.DROP,
                 position: {
                     lat: {{$vendor -> latitude}},
-                    lng: {{$vendor -> longitude}}
+                    lng: {{$vendor -> longitude}},
                 },
+                title : `{{$vendor -> name}}
+                {{$vendor -> address}}`,
             });
 
             //-----------3------------
-
+            const geocoder = new google.maps.Geocoder();
+            const infowindow = new google.maps.InfoWindow();
             google.maps.event.addListener(map, 'click', function(event) {
+
                 var newLocation = event.latLng;
                 if (newLocation.lat()){
                     $('#latitude').val(newLocation.lat());
@@ -286,8 +290,9 @@
                 }
 
                 changeLocationTo(newLocation,map,marker);
-            });
 
+            });
+            geocodeLatLng(geocoder, map, infowindow);
             $('#latitude').val({{$vendor -> latitude}});
             $('#longitude').val({{$vendor -> longitude}});
 
@@ -311,6 +316,25 @@
             map.setCenter(location);
         }
 
+        function geocodeLatLng(geocoder, map, infowindow) {
+            const input = document.getElementById("latlng").value;
+            const latlngStr = input.split(",", 2);
+            const latlng = {
+                lat: parseFloat(latlngStr[0]),
+                lng: parseFloat(latlngStr[1])
+            };
+            geocoder.geocode({ location: latlng }, (results, status) => {
+
+                map.setZoom(15);
+                const marker = new google.maps.Marker({
+                    position: latlng,
+                    map: map
+                });
+                infowindow.setContent(`{{$vendor -> name}},{{$vendor -> address}}`);
+                infowindow.open(map, marker);
+
+            });
+        }
 
 
 
