@@ -96,14 +96,15 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function ()
 
  ########################### test part routes #####################
 
-Route::get('subcateory',function (){
+############### هذه العلاقة تجلب القائمة الفرعية  لقائمة رئيسية ###############
+Route::get('subCategory',function (){
 
-      $mainCategory = \App\Models\MainCategory::find(31);
+      $mainCategory = \App\Models\MainCategory::find(85);
 
-   return       $mainCategory -> subCategories;
+        return   $mainCategory -> subCategories;
 });
-
-Route::get('maincategory',function (){
+############### هذه العلاقة تجلب القائمة الرئيسية لقائمة فرعية ###############
+Route::get('mainCategory',function (){
 
     $subcategory = \App\Models\SubCategory::find(1);
 

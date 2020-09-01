@@ -10,7 +10,7 @@ class SubCategory extends Model
     protected $table = 'sub_categories';
 
     protected $fillable = [
-        'translation_lang','parent_id','translation_of', 'name', 'slug', 'photo', 'active', 'created_at', 'updated_at'
+        'translation_lang','category_id','parent_id','translation_of', 'name', 'slug', 'photo', 'active', 'created_at', 'updated_at'
     ];
 
     public function scopeActive($query)
@@ -21,7 +21,7 @@ class SubCategory extends Model
     public function scopeSelection($query)
     {
 
-        return $query->select('id','parent_id','translation_lang', 'name', 'slug', 'photo', 'active', 'translation_of');
+        return $query->select('id','parent_id','category_id','translation_lang', 'name', 'slug', 'photo', 'active', 'translation_of');
     }
 
     public function getPhotoAttribute($val)
