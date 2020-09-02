@@ -32,7 +32,7 @@
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="mr-1">مرجبا
                   <span
-                      class="user-name text-bold-700">{{ Auth::user()->name }}   </span>
+                      class="user-name text-bold-700">{{ Auth::user()->name }} </span>
                 </span>
                             <span class="avatar avatar-online">
                   <img  style="height: 35px;" src="{{asset(Auth::user()->photo)}}" alt="avatar"><i></i></span>
@@ -40,8 +40,10 @@
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href=""><i class="ft-power"></i> تسجيل
-                                الخروج </a>
+                            <a class="dropdown-item" href="{{route('admin.logout.save')}}">
+                                <i class="ft-power"></i>
+                                تسجيل الخروج
+                            </a>
                         </div>
                     </li>
 

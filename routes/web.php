@@ -23,6 +23,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('site/logout','Auth\LoginController@logout');
+
 //Route::get('/home', 'HomeCo
 //Route::get('/send-mails', 'HomeController@sendMails');
 

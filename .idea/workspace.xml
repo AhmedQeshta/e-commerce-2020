@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caece16e-ee7a-46c8-bb11-50df2823ab5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubCategoriesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_01_160250_create_sub_categories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/subCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/subCategory/1599069724.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/subCategory/1599069744.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MainCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MainCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MainCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubCategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SubCategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/SubCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SubCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/MainCategoryObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subcategories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,24 +156,24 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/subcategories" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\admin\subcategories" />
+      <recent name="C:\xampp\htdocs\ecommerce\app\Http\Requests" />
+      <recent name="C:\xampp\htdocs\ecommerce\assets\images" />
+      <recent name="C:\xampp\htdocs\ecommerce\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\ecommerce\assets\images\mainCategory" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ecommerce\app\Http\Controllers\Admin" />
       <recent name="C:\xampp\htdocs\ecommerce\assets\images\admins" />
       <recent name="C:\wamp64\www\ecommerce\app\Models" />
       <recent name="C:\wamp64\www\ecommerce\resources\views\front" />
       <recent name="C:\wamp64\www\ecommerce" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\ecommerce\resources\views\admin" />
-      <recent name="C:\xampp\htdocs\ecommerce\assets\images\mainCategory" />
-      <recent name="C:\wamp64\www\ecommerce\resources\views" />
-      <recent name="C:\wamp64\www\ecommerce\assets" />
-      <recent name="C:\wamp64\www\ecommerce\routes" />
     </key>
   </component>
   <component name="RunManager">
@@ -234,6 +242,9 @@
       <workItem from="1598941239596" duration="4945000" />
       <workItem from="1598955374679" duration="3362000" />
       <workItem from="1598975902786" duration="3233000" />
+      <workItem from="1598981134084" duration="2544000" />
+      <workItem from="1599032049303" duration="9265000" />
+      <workItem from="1599047662314" duration="17356000" />
     </task>
     <servers />
   </component>
@@ -268,14 +279,23 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="381" y="105" width="666" height="592" key="#Docker/72.27.1294.741@72.27.1294.741" timestamp="1595276229713" />
+    <state x="395" y="91" key="#Inspections" timestamp="1599048952092">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1599048952092" />
     <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595276700998">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="314" y="59" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1595276700998" />
-    <state x="451" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598899089065">
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599035879448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1598899089065" />
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1599035879448" />
+    <state x="451" y="142" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599053196837">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1599053196837" />
+    <state x="451" y="142" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599033764103" />
     <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1595600179109" />
     <state x="348" y="27" width="746" height="741" key="#phpunit.xml" timestamp="1595196947758">
       <screen x="72" y="27" width="1294" height="741" />
@@ -322,9 +342,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/72.27.1294.741@72.27.1294.741" timestamp="1595276749329" />
-    <state x="522" y="139" key="NewPhpClassDialog" timestamp="1598713006361">
+    <state x="522" y="139" key="NewPhpClassDialog" timestamp="1599070719837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="522" y="139" key="NewPhpClassDialog/0.0.1536.824/1920.0.1536.824@0.0.1536.824" timestamp="1599070719837" />
     <state x="522" y="139" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1598713006361" />
     <state x="208" y="31" width="1050" height="737" key="SettingsEditor" timestamp="1595274259701">
       <screen x="72" y="27" width="1294" height="741" />

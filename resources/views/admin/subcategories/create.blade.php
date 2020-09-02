@@ -9,11 +9,11 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="">الرئيسية </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الرئيسة </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> الاقسام الرئيسية </a>
+                                <li class="breadcrumb-item"><a href="{{route('admin.subcategories')}}"> الاقسام الفرعية </a>
                                 </li>
-                                <li class="breadcrumb-item active">إضافة قسم رئيسي
+                                <li class="breadcrumb-item active">إضافة قسم الفرعية
                                 </li>
                             </ol>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> إضافة قسم رئيسي </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> إضافة قسم فرعي </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -43,12 +43,12 @@
                                 @include('admin.includes.alerts.errors')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form" action="{{route('admin.maincategories.store')}}"
+                                        <form class="form" action="{{route('admin.subcategories.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-group">
-                                                <label> صوره القسم </label>
+                                                <label> صوره القسم الفرعي </label>
                                                 <label id="projectinput7" class="file center-block">
                                                     <input type="file" id="file" name="photo">
                                                     <span class="file-custom"></span>
@@ -116,7 +116,44 @@
                                                     @endforeach
                                                 @endif
                                             </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="projectinput2"> أختر القسم الرئيسي </label>
+                                                    <select name="category_id" class="select2 form-control">
+                                                        <optgroup label="من فضلك أختر القسم ">
+                                                            @if($categories && $categories -> count() > 0)
+                                                                @foreach($categories as $category)
+                                                                    <option value="{{$category -> id }}">{{$category -> name}}</option>
+                                                                @endforeach
+                                                            @endif
+                                                        </optgroup>
+                                                    </select>
+                                                    @error('category_id')
+                                                    <span class="text-danger"> {{$message}}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
 
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="projectinput2"> أختر الفرعي رئيسي </label>
+                                                    <select name="parent_id" class="select2 form-control">
+                                                        <optgroup label="من فضلك أختر القسم ">
+                                                            <option value="0"> قسم فرعي رئيسي </option>
+                                                            @if($SuperSubCategories && $SuperSubCategories -> count() > 0)
+                                                                @foreach($SuperSubCategories as $SuperSubCategory)
+                                                                    <option value="{{$SuperSubCategory -> id }}">{{$SuperSubCategory->name}}</option>
+                                                                @endforeach
+                                                            @endif
+                                                        </optgroup>
+                                                    </select>
+                                                    @error('parent_id')
+                                                    <span class="text-danger"> {{$message}}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
 
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"

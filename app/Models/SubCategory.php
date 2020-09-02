@@ -17,6 +17,11 @@ class SubCategory extends Model
     {
         return $query->where('active', 1);
     }
+    public function scopeDefaultlang($query)
+    {
+        return $query->where('translation_of', 0);
+    }
+
 
     public function scopeSelection($query)
     {
@@ -35,10 +40,19 @@ class SubCategory extends Model
         return $this->active == 1 ? 'مفعل' : 'غير مفعل';
 
     }
+    public function scopeDefaultCategory($query){
+        return  $query -> where('translation_of',0);
+    }
+
 
     //get main category of subcategory
     public  function mainCategory(){
         return $this -> belongsTo(MainCategory::class,'category_id','id');
+    }
+
+    // get all translation categories
+    public function langCategories(){
+        return $this->hasMany(self::class, 'translation_of');
     }
 
 

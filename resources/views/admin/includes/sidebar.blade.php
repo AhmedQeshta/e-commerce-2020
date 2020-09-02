@@ -43,7 +43,8 @@
             <li class="nav-item {{ Request::is('admin/sub_categories','admin/sub_categories/*') ? 'open' : '' }}  ">
                 <a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">الاقسام الفرعية   </span>
-                    <span class="badge badge badge-danger badge-pill float-right mr-2">{{App\Models\SubCategory::count()}}</span>
+                                                              {{-- count if (lang = default lang (lang_of =0) and (parent_id == 0))   --}}
+                    <span class="badge badge badge-danger badge-pill float-right mr-2">{{App\Models\SubCategory::defaultCategory()->count()}}</span>
                 </a>
                 <ul class="menu-content">
                     <li class="{{ Request::is('admin/sub_categories') ? 'active' : '' }} "><a class="menu-item" href="{{route('admin.subcategories')}}"

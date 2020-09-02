@@ -181,6 +181,11 @@ class MainCategoriesController extends Controller
                 return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن حذف هذا القسم  ']);
             }
 
+            $sub_category = $maincategory->subCategories();
+            if (isset($sub_category) && $sub_category->count() > 0) {
+                return redirect()->route('admin.maincategories')->with(['error' => 'لأ يمكن  حذف  هذا القسم  ']);
+            }
+
             $image = Str::after($maincategory->photo, 'assets/');
             $image = base_path('assets/' . $image);
             unlink($image); //delete from folder
@@ -195,7 +200,7 @@ class MainCategoriesController extends Controller
         }
     }
 
-    public function changeStatus($id){
+public function changeStatus($id){
         try {
             $maincategory = MainCategory::find($id);
             if (!$maincategory)

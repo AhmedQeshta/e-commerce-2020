@@ -22,6 +22,10 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function (
     Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
     Route::post('login', 'LoginController@login')->name('admin.login');
 });
+        ########################## logout ++++++++++++++++++++
+Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function () {
+    Route::get('logout', 'LoginController@logout')->name('admin.logout.save');
+});
 ############################### End login +++++++++++++++++++++++++++++++++++++++++++
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function () {
@@ -62,7 +66,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin'], function ()
         Route::get('/','SubCategoriesController@index') -> name('admin.subcategories');
         Route::get('create','SubCategoriesController@create') -> name('admin.subcategories.create');
         Route::post('store','SubCategoriesController@store') -> name('admin.subcategories.store');
-        Route::get('edit/{id}','SubCategoriesController@edit') -> name('admin.subcategories.edit');
+        Route::get('edit/{subCategory_id}','SubCategoriesController@edit') -> name('admin.subcategories.edit');
         Route::post('update/{id}','SubCategoriesController@update') -> name('admin.subcategories.update');
         Route::get('delete/{id}','SubCategoriesController@destroy') -> name('admin.subcategories.delete');
         Route::get('changeStatus/{id}','SubCategoriesController@changeStatus') -> name('admin.subcategories.status');
